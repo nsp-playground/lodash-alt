@@ -10,7 +10,7 @@
 		"lint": "npx eslint ./",
 		"format": "npx prettier --write .",
 		"prepare": "husky install",
-		"healthcheck": "npm test"
+		"healthcheck": "npm run lint && npm test"
 	},
 	"repository": {
 		"type": "git",

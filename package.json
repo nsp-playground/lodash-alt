@@ -1,0 +1,28 @@
+{
+  "name": "lodash-alt",
+  "version": "1.0.0",
+  "description": "A series of Lodash specific functions with their implementation without having to install lodash as a 3rd-party package",
+  "type": "module",
+  "main": "./src/index.mjs",
+  "scripts": {
+    "test:watch": "NODE_OPTIONS=--experimental-vm-modules npx jest --watchAll",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nsp-playground/lodash-alt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nsp-playground/lodash-alt/issues"
+  },
+  "homepage": "https://github.com/nsp-playground/lodash-alt#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "jest": {
+    "transform": {}
+  }
+}

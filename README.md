@@ -10,29 +10,48 @@ The idea is instead of installing any external packages, just copy over the code
 
 ## Functions
 
-### **chunk**
+## `chunk(array, [size=1])`
 
 [Source Code](./src/chunk.mjs)
 
 > Creates an array of elements split into groups the length of `size`. If `array` can't be split evenly, the final chunk will be the remaining elements.
 
-#### Arguments
+**Arguments**
 
-1. `array` (`Array`): The array to process.
-2. `[size=1]` (`number`): The length of each chunk.
+- `array` (`Array`): The array to process.
+- `[size=1]` (`number`): The length of each chunk.
 
-#### Returns
+**Returns**
 
 (`Array`): Returns the new array of chunks.
 
-#### Example
+**Example**
 
 ```js
-_.chunk(['a', 'b', 'c', 'd'], 2);
+chunk(['a', 'b', 'c', 'd'], 2);
 // => [['a', 'b'], ['c', 'd']]
 
-_.chunk(['a', 'b', 'c', 'd'], 3);
+chunk(['a', 'b', 'c', 'd'], 3);
 // => [['a', 'b', 'c'], ['d']]
+```
+
+## `compact(array)`
+
+> Creates an array with all falsey values removed. The values `false`, `null`, `0`, `""`, `undefined`, and `NaN` are falsey.
+
+**Arguments**
+
+- `array` (`Array`): The array to compact.
+
+**Returns**
+
+- (`Array`): Returns the new array of filtered values.
+
+**Example**
+
+```js
+compact([0, 1, false, 2, '', 3]);
+// => [1, 2, 3]
 ```
 
 ### References

@@ -1,4 +1,4 @@
-import { chunk } from '../index.mjs';
+import { chunk } from '..';
 
 test('chunks an array of length 4 into groups of 2', () => {
 	expect(chunk(['a', 'b', 'c', 'd'], 2)).toEqual([

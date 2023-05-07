@@ -6,7 +6,8 @@
   "main": "./src/index.mjs",
   "scripts": {
     "test:watch": "NODE_OPTIONS=--experimental-vm-modules npx jest --watchAll",
-    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
+    "healthcheck": "npm test"
   },
   "repository": {
     "type": "git",

@@ -9,6 +9,7 @@
 		"test": "NODE_OPTIONS=--experimental-vm-modules npx jest --passWithNoTests",
 		"lint": "npx eslint ./",
 		"format": "npx prettier --write .",
+		"prepare": "husky install",
 		"healthcheck": "npm test"
 	},
 	"repository": {

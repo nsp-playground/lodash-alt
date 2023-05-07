@@ -2,6 +2,10 @@
 
 A series of Lodash specific functions with their implementation without having to install lodash as a 3rd-party package
 
+## Development
+
+...
+
 ## How To Use?
 
 Unlike in Lodash, you no longer need to install a 3rd-party package, just scroll down to the function that you need, go to it's "Source Code" and just copy the implementation into your code. All the functions should have documentation added based JSDoc standards. Plus, all these functions have been tested as well, but if you want to copy over the test files, feel free to do so.

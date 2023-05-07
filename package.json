@@ -1,29 +1,46 @@
 {
-  "name": "lodash-alt",
-  "version": "1.0.0",
-  "description": "A series of Lodash specific functions with their implementation without having to install lodash as a 3rd-party package",
-  "type": "module",
-  "main": "./src/index.mjs",
-  "scripts": {
-    "test:watch": "NODE_OPTIONS=--experimental-vm-modules npx jest --watchAll",
-    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
-    "healthcheck": "npm test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nsp-playground/lodash-alt.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nsp-playground/lodash-alt/issues"
-  },
-  "homepage": "https://github.com/nsp-playground/lodash-alt#readme",
-  "devDependencies": {
-    "jest": "^29.5.0"
-  },
-  "jest": {
-    "transform": {}
-  }
+	"name": "lodash-alt",
+	"version": "1.0.0",
+	"description": "A series of Lodash specific functions with their implementation without having to install lodash as a 3rd-party package",
+	"type": "module",
+	"main": "./src/index.mjs",
+	"scripts": {
+		"test:watch": "NODE_OPTIONS=--experimental-vm-modules npx jest --watch",
+		"test": "NODE_OPTIONS=--experimental-vm-modules npx jest --passWithNoTests",
+		"lint": "npx eslint ./",
+		"format": "npx prettier --write .",
+		"healthcheck": "npm test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nsp-playground/lodash-alt.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/nsp-playground/lodash-alt/issues"
+	},
+	"homepage": "https://github.com/nsp-playground/lodash-alt#readme",
+	"devDependencies": {
+		"eslint": "^8.40.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-jest": "^27.2.1",
+		"husky": "^8.0.3",
+		"jest": "^29.5.0",
+		"prettier": "2.8.8",
+		"commitizen": "^4.3.0",
+		"cz-conventional-changelog": "^3.3.0",
+		"init": "^0.1.2"
+	},
+	"jest": {
+		"transform": {}
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	}
 }

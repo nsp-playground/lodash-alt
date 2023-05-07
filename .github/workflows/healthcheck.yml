@@ -1,4 +1,4 @@
-name: Healthcheck (Unit Test)
+name: Healthcheck (Lint + Unit Test)
 
 on:
   pull_request:
@@ -12,9 +12,9 @@ jobs:
       matrix:
         node-version: [16]
     steps:
-      - name: "Checkout source code"
+      - name: 'Checkout source code'
         uses: actions/checkout@v3
-      - name: "Setup Node.js | Node Version: ${{ matrix.node-version }}"
+      - name: 'Setup Node.js | Node Version: ${{ matrix.node-version }}'
         continue-on-error: true
         uses: actions/setup-node@v3
         with:
@@ -29,5 +29,7 @@ jobs:
             deps-node-modules-
       - name: Install dependencies
         run: npm ci
+      - name: Runs linter
+        run: npm run lint
       - name: Runs unit test
         run: npm run test

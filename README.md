@@ -1,4 +1,5 @@
 # lodash-alt
+
 A series of Lodash specific functions with their implementation without having to install lodash as a 3rd-party package
 
 ## How To Use?
@@ -35,4 +36,5 @@ _.chunk(['a', 'b', 'c', 'd'], 3);
 ```
 
 ### References
+
 - [Using ES Modules with Jest](https://www.sammeechward.com/jest-and-esmodules)

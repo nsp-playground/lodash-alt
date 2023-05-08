@@ -12,7 +12,7 @@ The idea is instead of installing any external packages, just copy over the code
 
 ## `chunk(array, [size=1])`
 
-[Source Code](./src/chunk.mjs)
+[Source Code](./src/chunk/index.mjs)
 
 > Creates an array of elements split into groups the length of `size`. If `array` can't be split evenly, the final chunk will be the remaining elements.
 
@@ -37,6 +37,8 @@ chunk(['a', 'b', 'c', 'd'], 3);
 
 ## `compact(array)`
 
+[Source Code](./src/compact/index.mjs)
+
 > Creates an array with all falsey values removed. The values `false`, `null`, `0`, `""`, `undefined`, and `NaN` are falsey.
 
 **Arguments**
@@ -52,6 +54,34 @@ chunk(['a', 'b', 'c', 'd'], 3);
 ```js
 compact([0, 1, false, 2, '', 3]);
 // => [1, 2, 3]
+```
+
+## `concat(array, [...values])`
+
+[Source Code](./src/concat/index.mjs)
+
+> Creates a new array concatenating `array` with any additional arrays and/or values.
+
+**Arguments**
+
+- `array` (Array): The array to concatenate.
+- `[values]` (...\*): The values to concatenate.
+
+**Returns**
+
+(Array): Returns the new concatenated array.
+
+**Example**
+
+```js
+var array = [1];
+var other = concat(array, 2, [3], [[4]]);
+
+console.log(other);
+// => [1, 2, 3, [4]]
+
+console.log(array);
+// => [1]
 ```
 
 ### References

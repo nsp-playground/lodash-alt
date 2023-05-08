@@ -106,6 +106,33 @@ difference([2, 1], [2, 3]);
 // => [1]
 ```
 
+## `differenceBy(array, [values], [iteratee=_.identity])`
+
+[Source Code](./src/differenceBy/index.mjs)
+
+> This method is like \_.difference except that it accepts iteratee which is invoked for each element of array and values to generate the criterion by which they're compared. The order and references of result values are determined by the first array. The iteratee is invoked with one argument: (value).
+
+**Arguments**
+
+- `array` (Array): The array to inspect.
+- `[values]` (...Array): The values to exclude.
+- `[iteratee=_.identity]` (Function): The iteratee invoked per element.
+
+**Returns**
+
+(Array): Returns the new array of filtered values.
+
+**Example**
+
+```js
+_.differenceBy([2.1, 1.2], [2.3, 3.4], Math.floor);
+// => [1.2]
+
+// The `_.property` iteratee shorthand.
+_.differenceBy([{ x: 2 }, { x: 1 }], [{ x: 1 }], 'x');
+// => [{ 'x': 2 }]
+```
+
 ### References
 
 - [Using ES Modules with Jest](https://www.sammeechward.com/jest-and-esmodules)
